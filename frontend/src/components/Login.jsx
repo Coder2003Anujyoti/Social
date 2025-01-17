@@ -9,7 +9,7 @@ const Login = () => {
   const [secret,setSecret]=useState("");
   const [type,setType]=useState("password");
   const adds=async(item)=>{
-    const res=await fetch("http://localhost:8000/signup", {
+    const res=await fetch("https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/signup", {
     method:"POST",
     headers: {
         "Content-type":"application/json",
@@ -23,7 +23,7 @@ const Login = () => {
  }
   };
   const addl=async(item)=>{
-    const res=await fetch("http://localhost:8000/login", {
+    const res=await fetch("https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/login", {
     method:"POST",
     headers: {
         "Content-type":"application/json",

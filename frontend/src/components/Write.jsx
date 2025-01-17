@@ -14,7 +14,7 @@ const Write = ({names,imp}) => {
     formData.append("description",description);
     formData.append("name",names);
     formData.append("password",imp);
-    const response = await fetch("http://localhost:8000/items", {
+    const response = await fetch("https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/items", {
         method:"POST",
         body:formData,
         

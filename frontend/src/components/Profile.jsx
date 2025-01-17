@@ -6,7 +6,7 @@ const Profile = ({setDisable,names,imp,secret,setSecret}) => {
   const [text,setText]=useState("")
   const [disabled,setDisabled]=useState(false);
   const check=async(i)=>{
-    const res=await fetch("http://localhost:8000/check", {
+    const res=await fetch("https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/check", {
     method:"POST",
     headers: {
         "Content-type":"application/json",

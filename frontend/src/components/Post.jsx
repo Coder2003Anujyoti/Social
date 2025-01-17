@@ -13,7 +13,7 @@ const Post = ({names,imp}) => {
    const [commentlength,setCommentlength]=useState(1);
    const [text,setText]=useState("")
   const getaliens=async()=>{
-     const res=await fetch(`http://localhost:8000/api/values?offset=${offset}&limit=5`);
+     const res=await fetch(`https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/api/values?offset=${offset}&limit=5`);
      const data =await res.json();
          setLoad(false);
          setLoads(false);
@@ -21,7 +21,7 @@ const Post = ({names,imp}) => {
          setImageslength(data.length);
    }
    const getlike=async(it)=>{
-     const res=await fetch("http://localhost:8000/likes", {
+     const res=await fetch("https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/likes", {
     method:"PUT",
     headers: {
         "Content-type":"application/json",
@@ -71,7 +71,7 @@ const Post = ({names,imp}) => {
   }
   const addc=async(i)=>{
     if(i.comment.trim()!=''){
-    const res=await fetch(`http://localhost:8000/comments?offset=${commentoffset}&limit=3`, {
+    const res=await fetch(`https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/comments?offset=${commentoffset}&limit=3`, {
     method:"POST",
     headers: {
         "Content-type":"application/json",
@@ -84,7 +84,7 @@ setCommentdata(data.data);
 }
 }
 const view=async(i)=>{
-  const res=await fetch(`http://localhost:8000/comments?offset=${i.offset}&limit=3`, {
+  const res=await fetch(`https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/comments?offset=${i.offset}&limit=3`, {
     method:"POST",
     headers: {
         "Content-type":"application/json",
