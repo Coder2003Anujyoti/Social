@@ -4,7 +4,7 @@ const Write = ({names,imp}) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [description,setDescription]=useState("");
   const fileInput=useRef(null);
-  const addData=async()=>{
+  const addDatas=async()=>{
     if (!selectedFile && !description) {
       alert("Input required");
     }
@@ -21,11 +21,15 @@ const Write = ({names,imp}) => {
       });
      const data=await response.json();
      alert("Uploaded Successfully");
+    }
+  }
+  const addData=()=>{
+       addDatas()
        setSelectedFile(null);
        setDescription("");
        fileInput.current.value="";
     }
-  }
+  
   return (
     <>
  <div className="bg-gradient-to-bl from-slate-200 to-white bg-clip-text text-transparent font-extrabold  flex flex-col items-center justify-evenly text-2xl drop-shadow-xl">
