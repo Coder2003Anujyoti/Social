@@ -37,7 +37,7 @@ const upload = multer({
 });
 router.post("/items", upload.single("image"), (req, res) => {
   const details={
-    image: `http://localhost:8000/uploads/${req.file.filename}`,
+    image: `https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/uploads/${req.file.filename}`,
     description:req.body.description,
     like:[],
     dislike:[],
@@ -47,7 +47,7 @@ router.post("/items", upload.single("image"), (req, res) => {
     id:img.length+1,
     name:req.body.name,
     password:req.body.password,
-    image: `http://localhost:8000/uploads/${req.file.filename}`,
+    image: `https://high-darlleen-apisjdjjd-83875e9e.koyeb.app/uploads/${req.file.filename}`,
     description:req.body.description,
     like:[],
     dislike:[],

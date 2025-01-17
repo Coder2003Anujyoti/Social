@@ -2,6 +2,7 @@ const express = require('express');
 const fs=require('fs');
 const router = express.Router();
 const data=require('./images.json');
+const value=require("./data.json");
 const cors=require('cors');
 const app = express();
 app.use(cors({
@@ -9,6 +10,9 @@ app.use(cors({
 }));
 router.get('/values',(req,res)=>{
   return res.status(201).json(data);
+})
+router.get('/history',(req,res)=>{
+  return res.status(201).json(value);
 })
 router.post('/comments',(req,res)=>{
   const limit = parseInt(req.query.limit)||1
